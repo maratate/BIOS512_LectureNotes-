@@ -1,0 +1,57 @@
+Lecture 2 - 8/26/2025
+
+- enviornement is a relationship between a name and a value 
+
+One arrow = define a function ( x <- 10) 
+- creates a temperoary enviornment
+- creates a binding in this enviornement
+- the operater we use to update a value in the current enviornement 
+
+Double arrows = ( x <<- 10) 
+- this changes a value in an enclosing enviornemnt 
+- searches up in persiovous enviornemnts for a variable to change 
+
+Functions in R return the last expression/value in their body 
+- expression is a denotation of a value 
+- when its evaluated it turns into a value 
+
+Funcations have deafult arguments 
+example <- function (x=10, y=11){
+  x+y;
+}
+
+Laziness 
+- arguments to functions are not evalated until you use them inside the body of the function
+- if you don't use the argument within the body of the function it will dispapear and nothing happens 
+
+If you put a ?<functionname> then it will explain the function 
+apropos("search-term:) --> will search for terms 
+
+R is not a white space sensitive language 
+- you can split an expression across multiple lines as long as thing at the end of the expression is a binary operator 
+
+Data Frames 
+- are a spreadsheet 
+
+Example:
+data frame %>% 
+  group_by(property_name) %>%
+  tally()
+  arrange(desc(n))
+
+ %>% = pipe operator 
+
+property name -> is a variable within the dataframe but not one in the global enviornment 
+- tidyverse is making this happen 
+
+Stack of enviornements
+- sticks dataframe at the bottom of the stack of enviornments for evaluation 
+
+
+
+
+
+
+
+
+

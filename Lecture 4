@@ -691,8 +691,8 @@ Useful/common dplyr function:
     with the group keys and the count.
 7.  summarize(name=expr,...) operate per group and produce a table of
     summaries.
-
-# ggplot
+-----------------------------------------------------------------------------------------
+ggplot
 
 The `gg` in `ggplot` stands for "grammar of graphics."
 
@@ -722,11 +722,11 @@ ggplot(status_probs, aes(marital_status, p)) +
 
 So how does this work?
 
-## ggplot concepts
+ggplot concepts
 
-ggplot works by letting you associate *data* with *aesthetics*. Data is
-what you store in a data frame. An aesthetic is any sort of thing you
-might use to distinguish objects visually.
+ggplot works by letting you associate *data* with *aesthetics*. 
+- Data iswhat you store in a data frame. 
+- An aesthetic is any sort of thing you might use to distinguish objects visually.
 
 The most trivial example:
 
@@ -737,6 +737,7 @@ df <- tibble(x=x, y=3*x + 2 + rnorm(length(x)))
 ggplot(df,aes(x,y)) + geom_point();
 
 ```
+
 
 Note that when we use grammar of graphics we don't think about *plot
 types*. We think about *data* and *aesthetics* from which plot types
